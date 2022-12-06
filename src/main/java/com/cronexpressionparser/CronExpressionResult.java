@@ -14,6 +14,30 @@ public class CronExpressionResult {
     private String command;
 
 
+    public void setMinutes(List<Integer> minutes) {
+        this.minutes = minutes;
+    }
+
+    public void setHours(List<Integer> hours) {
+        this.hours = hours;
+    }
+
+    public void setDaysOfMonth(List<Integer> daysOfMonth) {
+        this.daysOfMonth = daysOfMonth;
+    }
+
+    public void setMonths(List<Integer> months) {
+        this.months = months;
+    }
+
+    public void setDaysOfWeek(List<Integer> daysOfWeek) {
+        this.daysOfWeek = daysOfWeek;
+    }
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
+
     public String toString() {
         return format("%-14s%s\n", "minute", listToString(minutes)) +
                 format("%-14s%s\n", "hour", listToString(hours)) +
