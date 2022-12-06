@@ -9,7 +9,7 @@ public class OperatorFactory {
     private static final Map<OperatorType, IOperator> operatorMap;
     static {
         operatorMap = new LinkedHashMap<>();
-        // order of precedence
+        // in order of precedence
         operatorMap.put(OperatorType.COMMA, new CommaOperator());
         operatorMap.put(OperatorType.STEP, new StepOperator());
         operatorMap.put(OperatorType.RANGE, new RangeOperator());
