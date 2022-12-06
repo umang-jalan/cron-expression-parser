@@ -13,7 +13,8 @@ public class HyphenOperator implements IOperator{
      * validates
      *  1. if range is valid
      *  2. values within minValue and maxValue
-     * process and returns the calculated values
+     * processes and returns the calculated values
+     *
      * @param expression
      * @param minValue
      * @param maxValue

@@ -8,7 +8,7 @@ import java.util.List;
 public class AnyValueOperator implements IOperator{
 
     /**
-     * process wither * or fixed value
+     * processes  asterisk(*) or fixed value
      * in case of fixed value, check if valid number with range [minValue, maxValue]
      * calculates and returns the set of values
      *

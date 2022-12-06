@@ -13,7 +13,7 @@ public class SlashOperator implements IOperator{
      * validates
      *  1. if expression is valid
      *  2. valid interval
-     * process and returns the calculated values
+     * processes and returns the calculated values
      *
      * @param expression
      * @param minValue
