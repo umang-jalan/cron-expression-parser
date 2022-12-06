@@ -16,7 +16,7 @@ public class TimeFieldTest {
         InvalidCronExpression exception = assertThrows(InvalidCronExpression.class, () -> {
             new MinuteField("60").process();
         });
-        assertEquals("[MINUTE] value not in range :min = 0 max = 59", exception.getMessage());
+        assertEquals("[MINUTE] Value not in range. Allowed Range : min = 0 max = 59", exception.getMessage());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class TimeFieldTest {
         InvalidCronExpression exception = assertThrows(InvalidCronExpression.class, () -> {
             new DayOfMonthField("1-32").process();
         });
-        assertEquals("[DAY_OF_MONTH] invalid start and end range allowed : min = 1 max = 31", exception.getMessage());
+        assertEquals("[DAY_OF_MONTH] invalid start and end values, Allowed Range : min = 1 max = 31", exception.getMessage());
     }
 
     @Test

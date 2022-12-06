@@ -33,7 +33,7 @@ public class CronExpressionParserTest {
         Exception exception2 = assertThrows(InvalidCronExpression.class, () -> {
             cronExpressionParser.parseCronExpression("*/15 0-23 32 * * *");
         });
-        assertEquals("[DAY_OF_MONTH] value not in range :min = 1 max = 31", exception2.getMessage());
+        assertEquals("[DAY_OF_MONTH] Value not in range. Allowed Range : min = 1 max = 31", exception2.getMessage());
 
         Exception exception3 = assertThrows(InvalidCronExpression.class, () -> {
             cronExpressionParser.parseCronExpression("minute * * * * *");

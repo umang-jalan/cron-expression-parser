@@ -16,7 +16,7 @@ public class OperatorTest {
         InvalidCronExpression exception = assertThrows(InvalidCronExpression.class, () -> {
             new RangeOperator().process("0-32", 1, 31);
         });
-        assertEquals("invalid start and end range allowed : min = 1 max = 31", exception.getMessage());
+        assertEquals("invalid start and end values, Allowed Range : min = 1 max = 31", exception.getMessage());
     }
 
     @Test

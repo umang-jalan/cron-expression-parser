@@ -17,7 +17,7 @@ public class AnyValueOperator implements IOperator{
         }else {
             int fixedValue = parseNumber(expression);
             if (fixedValue < minValue || fixedValue > maxValue){
-                throw new InvalidCronExpression("value not in range :" + "min = " + minValue + " max = " + maxValue);
+                throw new InvalidCronExpression("Value not in range. Allowed Range : " + "min = " + minValue + " max = " + maxValue);
             }
             result.add(fixedValue);
         }

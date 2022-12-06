@@ -19,7 +19,7 @@ public class RangeOperator implements IOperator{
         int end = parseNumber(range[1]);
 
         if (start > end || start < minValue || start > maxValue || end > maxValue){
-            throw new InvalidCronExpression("invalid start and end range allowed : " + "min = " + minValue + " max = " + maxValue);
+            throw new InvalidCronExpression("invalid start and end values, Allowed Range : " + "min = " + minValue + " max = " + maxValue);
         }
 
         List<Integer> result = new LinkedList<>();
