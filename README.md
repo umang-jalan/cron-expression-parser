@@ -56,7 +56,7 @@ java -jar cron-expression-parser-1.0.0.jar "*/15 0 1,15 * 1-5 /usr/bin/find"
 ```
 _Sample Command_ :
 ```
-e.g., /gradlew run --args='"*/15 0 1,15 * 1-5 /usr/bin/find"'
+./gradlew run --args='"*/15 0 1,15 * 1-5 /usr/bin/find"'
 ```
 
 In both approaches, the input arguments has two parts:
