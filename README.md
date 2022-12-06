@@ -43,12 +43,20 @@ _Unsupported features_
 
 - Run via java jar using command line
 ``` 
-java -jar cron-expression-parser-1.0.0.jar [CRON_EXPRESSION] [COMMAND]
+java -jar cron-expression-parser-1.0.0.jar "[CRON_EXPRESSION] [COMMAND]"
+```
+_Sample Command_ :
+```
+java -jar cron-expression-parser-1.0.0.jar "*/15 0 1,15 * 1-5 /usr/bin/find"
 ```
 
 - Alternatively, `./gradlew` can also be used to run the application
 ```
 ./gradlew run --args='"[CRON_EXPRESSION] [COMMAND]"'
+```
+_Sample Command_ :
+```
+e.g., /gradlew run --args='"*/15 0 1,15 * 1-5 /usr/bin/find"'
 ```
 
 In both approaches, the input arguments has two parts:
