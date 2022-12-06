@@ -6,8 +6,17 @@ import com.cronexpressionparser.timefield.TimeFieldFactory;
 
 import java.util.List;
 
+/**
+ * Entry point for the application to parse cron expression
+ */
 public class CronExpressionParser {
 
+    /**
+     * parses cron expression and returns the parsed values or throws exception
+     * @param cronExpressionArg : Cron expression to be parsed
+     * @return CronExpressionResult
+     * @throws InvalidCronExpression
+     */
     public CronExpressionResult parseCronExpression(String cronExpressionArg) throws InvalidCronExpression {
         String[] subExpressions = cronExpressionArg.split("\\s+");
         if (subExpressions.length < 6){

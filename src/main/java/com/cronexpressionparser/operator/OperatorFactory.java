@@ -11,8 +11,8 @@ public class OperatorFactory {
         operatorMap = new LinkedHashMap<>();
         // in order of precedence
         operatorMap.put(OperatorType.COMMA, new CommaOperator());
-        operatorMap.put(OperatorType.STEP, new StepOperator());
-        operatorMap.put(OperatorType.RANGE, new RangeOperator());
+        operatorMap.put(OperatorType.SLASH, new SlashOperator());
+        operatorMap.put(OperatorType.HYPHEN, new HyphenOperator());
         operatorMap.put(OperatorType.ANY, new AnyValueOperator());
     }
 

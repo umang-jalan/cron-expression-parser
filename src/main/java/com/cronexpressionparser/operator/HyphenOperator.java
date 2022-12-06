@@ -6,8 +6,20 @@ import com.cronexpressionparser.exceptions.InvalidCronExpression;
 import java.util.LinkedList;
 import java.util.List;
 
-public class RangeOperator implements IOperator{
+public class HyphenOperator implements IOperator{
 
+    /**
+     * Range Operator
+     * validates
+     *  1. if range is valid
+     *  2. values within minValue and maxValue
+     * process and returns the calculated values
+     * @param expression
+     * @param minValue
+     * @param maxValue
+     * @return
+     * @throws InvalidCronExpression
+     */
     @Override
     public List<Integer> process(String expression, int minValue, int maxValue) throws InvalidCronExpression {
         String[] range = expression.split("-");

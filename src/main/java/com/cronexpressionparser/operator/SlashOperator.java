@@ -6,8 +6,21 @@ import com.cronexpressionparser.exceptions.InvalidCronExpression;
 import java.util.LinkedList;
 import java.util.List;
 
-public class StepOperator implements IOperator{
+public class SlashOperator implements IOperator{
 
+    /**
+     * Step Operator
+     * validates
+     *  1. if expression is valid
+     *  2. valid interval
+     * process and returns the calculated values
+     *
+     * @param expression
+     * @param minValue
+     * @param maxValue
+     * @return
+     * @throws InvalidCronExpression
+     */
     @Override
     public List<Integer> process(String expression, int minValue, int maxValue) throws InvalidCronExpression {
         if (!expression.startsWith("*")){

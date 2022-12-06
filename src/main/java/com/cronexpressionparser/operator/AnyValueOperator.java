@@ -7,6 +7,17 @@ import java.util.List;
 
 public class AnyValueOperator implements IOperator{
 
+    /**
+     * process wither * or fixed value
+     * in case of fixed value, check if valid number with range [minValue, maxValue]
+     * calculates and returns the set of values
+     *
+     * @param expression
+     * @param minValue
+     * @param maxValue
+     * @return
+     * @throws InvalidCronExpression
+     */
     @Override
     public List<Integer> process(String expression, int minValue, int maxValue) throws InvalidCronExpression {
         List<Integer> result = new LinkedList<>();

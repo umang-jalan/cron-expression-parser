@@ -7,7 +7,9 @@ import com.cronexpressionparser.operator.OperatorFactory;
 
 import java.util.List;
 
-
+/**
+ * Abstract class for time fields in cron expression, allowing separate processing for each time field if required
+ */
 public abstract class AbstractTimeField {
     private String expression;
     private final TimeFieldType type;
@@ -17,6 +19,12 @@ public abstract class AbstractTimeField {
         this.type = type;
     }
 
+    /**
+     * this has the core business logic to parse each sub expression individually
+     * and return the parsed values
+     * @return
+     * @throws InvalidCronExpression
+     */
     public List<Integer> process() throws InvalidCronExpression {
         IOperator iOperator = OperatorFactory.getOperator(expression);
         try {

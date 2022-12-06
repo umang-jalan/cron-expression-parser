@@ -1,7 +1,7 @@
 package com.cronexpressionparser.enums;
 
 public enum OperatorType {
-    ANY("*"), STEP("/"), RANGE("-"), COMMA(",");
+    ANY("*"), SLASH("/"), HYPHEN("-"), COMMA(",");
 
     private final String symbol;
 

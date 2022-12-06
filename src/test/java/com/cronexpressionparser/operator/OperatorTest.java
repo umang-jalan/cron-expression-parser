@@ -14,7 +14,7 @@ public class OperatorTest {
     @Test
     public void invalidRangeShouldThrowException(){
         InvalidCronExpression exception = assertThrows(InvalidCronExpression.class, () -> {
-            new RangeOperator().process("0-32", 1, 31);
+            new HyphenOperator().process("0-32", 1, 31);
         });
         assertEquals("invalid start and end values, Allowed Range : min = 1 max = 31", exception.getMessage());
     }
@@ -22,14 +22,14 @@ public class OperatorTest {
     @Test
     public void validRangeShouldReturnResult() throws InvalidCronExpression {
         List<Integer> expected = Arrays.asList(2, 3, 4, 5);
-        List<Integer> actual = new RangeOperator().process("2-5", 1, 31);
+        List<Integer> actual = new HyphenOperator().process("2-5", 1, 31);
         assertEquals(expected, actual);
     }
 
     @Test
     public void invalidStepShouldThrowException(){
         InvalidCronExpression exception = assertThrows(InvalidCronExpression.class, () -> {
-            new StepOperator().process("3/15", 1, 31);
+            new SlashOperator().process("3/15", 1, 31);
         });
         assertEquals("/ requires expression to start with *", exception.getMessage());
     }
@@ -37,7 +37,7 @@ public class OperatorTest {
     @Test
     public void validStepShouldReturnResult() throws InvalidCronExpression {
         List<Integer> expected = Arrays.asList(0, 15, 30, 45);
-        List<Integer> actual = new StepOperator().process("*/15", 0, 59);
+        List<Integer> actual = new SlashOperator().process("*/15", 0, 59);
         assertEquals(expected, actual);
     }
 
