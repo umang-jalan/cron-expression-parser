@@ -2,6 +2,7 @@
 Cron expression parser is a command line application which parses a cron string and expands each field to show the times at which it will run. 
 
 _Supported Features_
+
 * Valid expression must have 5 parts followed by a command
 * An expression can contain following symbols
     * Hyphens (-) : Allows a range of values , e.g., `1-12`
@@ -17,6 +18,7 @@ _Supported Features_
     * Day of Week : 0-6
     
 _Unsupported features_
+
 * special time strings, like @yearly, @monthly etc
 * words notation for month/day of week
 * question mark
