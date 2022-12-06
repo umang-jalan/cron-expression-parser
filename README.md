@@ -1,20 +1,20 @@
 # cron-expression-parser
-Cron expression parser command line application or script which parses a cron string and expands each field to show the times at which it will run. 
+Cron expression parser is a command line application which parses a cron string and expands each field to show the times at which it will run. 
 
 _Supported Features_
 * Valid expression must have 5 parts followed by a command
 * An expression can contain following symbols
-    * Hyphens (-) : Allows a range if values , e.g., `1-12`
+    * Hyphens (-) : Allows a range of values , e.g., `1-12`
     * Comma (,) :  Allows multiple values or multiple sub expressions , e.g., `1,2,3,4` , `*/12,2-15,5`
     * Slash (/) : Allows intervals of values, e.g., `*/15` will  return values in intervals of 15
-    * Any Value (*) : Allows any value within defined boundary, e.g, if boundary is [1,30], then this will all values between [1,30]
+    * Any Value (*) : Allows any value within defined boundary, e.g., if boundary is [1,30], then this will return all values between [1,30]
     
 * Each time part has a fixed range which the given expression must satisfy
+    * Minute : 0-59
+    * Hour : 0-23
+    * Day of month : 1-31
     * Month : 1-12
     * Day of Week : 0-6
-    * Hour : 0-23
-    * Minute : 0-59
-    * Day of month : 1-31
     
 _Unsupported features_
 * special time strings, like @yearly, @monthly etc
@@ -22,6 +22,7 @@ _Unsupported features_
 * question mark
 * Slash expression starting with non-asterisk(*) value, e.g, `1/15` is not supported
 * Separate number of days in each month. e.g, February is not handled as 28-29 days month 
+* Year is not supported 
 
 
 
@@ -45,7 +46,7 @@ _Unsupported features_
 java -jar cron-expression-parser-1.0.0.jar [CRON_EXPRESSION] [COMMAND]
 ```
 
-- Alternatively, `./gradlew` can also be used to run the script
+- Alternatively, `./gradlew` can also be used to run the application
 ```
 ./gradlew run --args='"[CRON_EXPRESSION] [COMMAND]"'
 ```
